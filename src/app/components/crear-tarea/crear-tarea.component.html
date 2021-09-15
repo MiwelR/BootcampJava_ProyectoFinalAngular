@@ -1,0 +1,51 @@
+<div class="container pt-4">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <h3>{{ titulo }}
+                        <div *ngIf="loading" class="spinner-border float-right" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </h3>
+                    <span *ngIf="submitted && createTarea.invalid" class="badge badge-danger">TODOS LOS CAMPOS SON
+                        OBLIGATORIOS</span>
+                    <form class="mt-4" [formGroup]="createTarea" (ngSubmit)="agregarEditarTarea()">
+                            <input type="number" class="form-control form-control-lg mt-3" formControlName="nt"
+                                placeholder="ID">
+                                <br>
+
+                            <input type="text" class="form-control form-control-lg" formControlName="titulo"
+                                placeholder="Titulo"><br>
+
+
+                            <input type="text" class="form-control form-control-lg" formControlName="descripcion"
+                                placeholder="Descripcion">
+
+
+                            <input type="text" class="form-control form-control-lg mt-3" formControlName="responsable"
+                                placeholder="Responsable">
+
+                            <input type="number" class="form-control form-control-lg mt-3"
+                                formControlName="urgencia" placeholder="Urgencia"><br>
+                            
+                            <label for="start">Fecha de Inicio:</label><br>
+                            
+                            <input type="date" id="start" name="start-task" formControlName="fechaCreacion" min="2021-09-12"><br>
+
+                            <label for="finish">Fecha de Fin:</label><br>
+                            
+                            <input type="date" id="finish" name="finish-task" formControlName="fechaActualizacion" min="2021-09-12">
+
+
+                        <div class="mt-3">
+                            <button type="text" class="btn btn-secondary btn-lg mr-3"
+                                routerLink="/task-list">Volver</button>
+                            <button type="submit" class="btn btn-dark btn-lg">Agregar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

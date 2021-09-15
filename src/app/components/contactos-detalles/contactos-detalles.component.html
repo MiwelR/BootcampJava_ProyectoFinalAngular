@@ -1,0 +1,49 @@
+
+      <div *ngIf="loading" class="spinner-border float-right" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>      
+<!-- <h5>
+    <img mat-card-avatar src="{{contactoSeleccionado.avatar}}" alt="avatar">   
+</h5>
+
+<h4>
+    Nombre: {{ contactoSeleccionado.first_name }}
+</h4>
+<h4>
+    Apellidos: {{contactoSeleccionado.last_name}}
+</h4>
+<h4>Email: {{contactoSeleccionado.email}}
+</h4> -->
+
+
+<button class="btn btn-dark btn-lg float-right" [routerLink]="['/contact-list']">
+                Volver a Contactos</button>
+
+
+<form class="mt-4" [formGroup]="myGroup">
+    <h5>
+        <img mat-card-md-image src={{contactoSeleccionado.avatar}} alt="avatar">
+    </h5>
+    <br>
+
+    <h5>
+        Nombre:
+    </h5>
+    <input type="text" class="form-control form-control-lg" formControlName="first_name" value="{{ contactoSeleccionado.first_name }}"><br>
+
+    <h5>
+        Apellidos:
+    </h5>
+    <input type="text" class="form-control form-control-lg" formControlName="last_name" value="{{ contactoSeleccionado.last_name }}"><br>
+
+    <h5>
+        Email:
+    </h5>
+    <input type="text" class="form-control form-control-lg" formControlName="email" value="{{ contactoSeleccionado.email }}">
+
+
+    <div class="mt-3">
+        <button type="text" class="btn btn-secondary btn-lg mr-3" routerLink="/contact-list">Volver</button>
+        <button type="submit" class="btn btn-dark btn-lg">Actualizar</button>
+    </div>
+</form>

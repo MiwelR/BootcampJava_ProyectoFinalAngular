@@ -1,0 +1,37 @@
+
+<div class="container mt-4">
+    <div class="card">
+        <mat-card>
+            <mat-card-content>
+        <div class="card-body">
+        <div class="header">
+            <h2>Iniciar sesión en ConTask</h2>
+        </div>
+        <form [formGroup]="formularioLogin" (submit)="enviar()">
+            <div class="email-input">
+                <mat-label>Correo Electrónico:</mat-label><br>
+                <mat-form-field class="full-width" appearance="outline">
+                    <input formControlName="email" matInput required />
+                    <mat-error *ngIf="formularioLogin">
+                        Campo de Email obligatorio
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-label>Contraseña:</mat-label><br>
+                <mat-form-field class="full-width" appearance="outline">
+                    <input formControlName="password" placeholder="Password" matInput type="password" />
+                    <mat-error *ngIf="formularioLogin">
+                        Contraseña obligatoria
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+
+            <button class="btn btn-light">Iniciar Sesión</button>
+            <button class="btn btn-light" [routerLink]="['/register']">Registrarse</button>
+
+        </form>
+        </div></mat-card-content></mat-card>
+    </div>
+    </div>

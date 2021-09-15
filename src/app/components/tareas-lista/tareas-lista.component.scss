@@ -1,0 +1,28 @@
+i {
+  cursor: pointer;
+}
+
+.task-box {
+  display: grid;
+  grid-template-columns: 8fr 0.5fr;
+}
+
+.btn {
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+  background-color: #00bce4;
+  border-color: #00bce4;
+  width: 10rem;
+  font-size: 13px;
+
+  color: black;
+}
+
+.btn:hover {
+  background-color: rgb(26, 26, 26);
+  color: #00bce4;
+}
+
+.task-field {
+  color: white;
+}

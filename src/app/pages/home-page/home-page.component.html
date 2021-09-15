@@ -1,0 +1,43 @@
+<!--  Boton Log Out -->
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+<button button class="btn btn-dark btn-lg float-right" [routerLink]="['/login']">
+    Desconectar
+</button>
+
+
+
+<div class="content" role="main">
+
+    <h1>Bienvenido a ConTask</h1>
+
+</div>
+<hr>
+<h2>Aplicación para gestionar contactos y tareas</h2><br>
+<h4>- Elige la operación que quieras realizar -</h4><br>
+
+<input type="hidden" #selection>
+<h6>Puedes revisar tu lista de tareas:</h6>
+<div class="card-container">
+    <button button class="btn btn-dark btn-lg float-left" [routerLink]="['/task-list']">
+        Lista de Tareas
+    </button> 
+    <br>
+    <br>
+    <hr>
+<h6>Puedes revisar tu lista de contactos:</h6>
+
+    <button button class="btn btn-dark btn-lg float-center" [routerLink]="['/contact-list']">
+        Lista de Contactos
+    </button>
+</div>
+<hr>
+
+<!-- Footer -->
+<footer>
+    2021© MiwelR - Bootcamp Full Stack - Proyecto Angular
+</footer>
+</div>
+</div>
+</div>
